@@ -38,17 +38,19 @@ namespace GraphQLSimpleTalk.Controllers
         }*/
         private readonly IDocumentExecuter _documentExecuter;
         private readonly ISchema _schema;
-        //readonly EC3Service ec3Service;
-        public GraphQlController(ISchema schema, IDocumentExecuter documentExecuter)
+        private readonly EC3Service _ec3Service;
+
+        public GraphQlController(ISchema schema, IDocumentExecuter documentExecuter, EC3Service ec3Service)
         {
             _schema = schema;
             _documentExecuter = documentExecuter;
+            this._ec3Service = ec3Service;
         }
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] GraphQlQuery query)
         {
-            //var schema = new Schema { Query = new MaterialQuery(ec3Service) };
+            var schema = new Schema { Query = new MaterialQuery(_ec3Service) };
             var result = await new DocumentExecuter().ExecuteAsync(x =>
             {
                 x.Schema = _schema;

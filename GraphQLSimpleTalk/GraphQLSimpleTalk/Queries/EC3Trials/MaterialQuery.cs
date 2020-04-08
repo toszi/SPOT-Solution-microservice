@@ -12,17 +12,10 @@ namespace GraphQLSimpleTalk.Queries.EC3Trials
     {
         public MaterialQuery(EC3Service ec3Service)
         {
-            /*
-            Field<ListGraphType<MaterialType>>(
-                name: "materials",
-                resolve: context => {
-                    return ec3Service.GetAllMaterials();
-                }
-            );
-            */
             Field<ListGraphType<MaterialType>>(
                 "materials",
-                resolve: context => ec3Service.GetAllMaterials()
+                resolve: context => { return ec3Service.GetAllMaterials(); },
+                description: "Gets all the materials"
             );
         }
     }

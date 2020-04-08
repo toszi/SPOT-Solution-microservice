@@ -69,5 +69,13 @@ namespace GraphQLSimpleTalk.Entities.EC3Trials
         public int? GypsumHardBodyImpactC1929 { get; set; }
         //Z stands for standard deviation
         public double BiogenicEmbodiedCarbonZ { get; set; }
+        public double? MaxSize { get; set; }
+        public double? SpecificGravity { get; set; }
+        public string RecommendedApplication { get; set; }
+        public string ImageLink { get; set; }
+        public string ReferenceServiceLife { get; set; }
+        public string IntendedApplication { get; set; }
+        public string InsulationIntendedApplication { get; set; }
+        public string ManufacturerType { get; set; }
     }
 }

@@ -18,29 +18,29 @@ namespace GraphQLSimpleTalk.Services
     {
         private const string baseURL = "https://etl-api.cqd.io/api";
 
-        public string GetAllMaterials()
+        public Material GetAllMaterials<Material>()
         {
-            string responseString = string.Empty;
+            string responseString = @"";
             LoginCredentials deserializedLoginCredentials = JsonConvert.DeserializeObject<LoginCredentials>(login());
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(baseURL+ "/materials");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(baseURL + "/materials");
             request.PreAuthenticate = true;
             request.Headers.Add("Authorization", "Bearer " + deserializedLoginCredentials.key);
 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             {
-                if(response.StatusCode != HttpStatusCode.OK)
+                if (response.StatusCode != HttpStatusCode.OK)
                 {
                     throw new ApplicationException("error code: " + response.StatusCode);
                 }
-                
+
                 //process the response stream
-                using(Stream streamObj = response.GetResponseStream())
+                using (Stream streamObj = response.GetResponseStream())
                 {
                     if (streamObj != null)
                     {
-                        using(StreamReader reader = new StreamReader(streamObj))
+                        using (StreamReader reader = new StreamReader(streamObj))
                         {
-                            responseString = reader.ReadToEnd();
+                            responseString += reader.ReadToEnd();
                         }
                     }
                 }
@@ -48,7 +48,15 @@ namespace GraphQLSimpleTalk.Services
 
             debugOutput(responseString);
 
-            return responseString;
+            JArray jArr = JArray.Parse(responseString);
+            List<string> materials = new List<string>();
+            for (int i = 0; i < jArr.Count; i++)
+            {
+                materials.Add(jArr[i].ToString());
+            }
+
+            var jObj = JObject.Parse(responseString);
+            return JsonConvert.DeserializeObject<Material>(responseString);
         }
 
         private void debugOutput(string debugString)

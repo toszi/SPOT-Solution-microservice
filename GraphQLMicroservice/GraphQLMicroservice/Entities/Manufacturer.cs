@@ -8,8 +8,8 @@ namespace GraphQLMicroservice.Entities
     public class Manufacturer
     {
         public string Id { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public DateTime UpdatedOn { get; set; }
+        public string CreatedOn { get; set; }
+        public string UpdatedOn { get; set; }
         public Owner Owner { get; set; }
         public string Address { get; set; }
         public double Latitude { get; set; }

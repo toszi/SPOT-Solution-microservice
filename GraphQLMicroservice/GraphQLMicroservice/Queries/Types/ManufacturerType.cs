@@ -12,7 +12,7 @@ namespace GraphQLMicroservice.Queries.Types
         public ManufacturerType()
         {
             Field(x => x.Id);
-            Field<DateTimeGraphType>("created_on");
+            Field(x => x.CreatedOn);
             Field(x => x.UpdatedOn);
             Field<OwnerType>("owner");
             Field(x => x.Address);

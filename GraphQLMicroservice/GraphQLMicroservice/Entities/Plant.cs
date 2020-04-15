@@ -7,32 +7,32 @@ namespace GraphQLMicroservice.Entities
 {
     public class Plant
     {
-        public string id { get; set; }
-        public DateTime created_on { get; set; }
-        public DateTime updated_on { get; set; }
-        public object owner { get; set; }
-        public string address { get; set; }
-        public double latitude { get; set; }
-        public double longitude { get; set; }
-        public Location location { get; set; }
-        public string address_line { get; set; }
-        public string admin_district { get; set; }
-        public string admin_district2 { get; set; }
-        public string locality { get; set; }
-        public string postal_code { get; set; }
-        public string country { get; set; }
-        public string name { get; set; }
-        public object alt_names { get; set; }
-        public OwnedBy owned_by { get; set; }
-        public object gwp_contact { get; set; }
-        public object contact_website { get; set; }
-        public object currency { get; set; }
-        public object units { get; set; }
-        public object origin_code { get; set; }
-        public object notes { get; set; }
-        public object distance { get; set; }
-        public string carbon_intensity { get; set; }
-        public object categories { get; set; }
-        public int total_epds { get; set; }
+        public string Id { get; set; }
+        public string CreatedOn { get; set; }
+        public string UpdatedOn { get; set; }
+        public Owner Owner { get; set; }
+        public string Address { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public Location Location { get; set; }
+        public string AddressLine { get; set; }
+        public string AdminDistrict { get; set; }
+        public string AdminDistrict2 { get; set; }
+        public string Locality { get; set; }
+        public string PostalCode { get; set; }
+        public string Country { get; set; }
+        public string Name { get; set; }
+        public List<string> AltNames { get; set; }
+        public OwnedBy OwnedBy { get; set; }
+        public string GwpContact { get; set; }
+        public string ContactWebsite { get; set; }
+        public string Currency { get; set; }
+        public string Units { get; set; }
+        public string OriginCode { get; set; }
+        public string Notes { get; set; }
+        public string Distance { get; set; }
+        public string CarbonIntensity { get; set; }
+        public List<string> Categories { get; set; }
+        public int TotalEpds { get; set; }
     }
 }

@@ -8,9 +8,9 @@ namespace GraphQLMicroservice.Entities
     public class Material
     {        
         public string Id { get; set; }
-        public string CreatedOn { get; set; }
+        public DateTime CreatedOn { get; set; }
         public string CreatedBy { get; set; }
-        public string UpdatedOn { get; set; }
+        public DateTime UpdatedOn { get; set; }
         public string UpdatedBy { get; set; }
         public Owner Owner { get; set; }
         public string Name { get; set; }
@@ -42,6 +42,10 @@ namespace GraphQLMicroservice.Entities
         public double ConcreteScmMin { get; set; }
         public double ConcreteScmMax { get; set; }
         public ConcreteScmDetails ConcreteScmDetails { get; set; }
+        public bool ConcreteAirEntrain { get; set; }
+        public bool ConcreteCo2Entrain { get; set; }
+        public bool WhiteCement { get; set; }
+        public bool LightWeight { get; set; }
         public string Density { get; set; }
         public string SteelUltimTensileStrMin { get; set; }
         public string SteelYieldTensileStrMin { get; set; }
@@ -62,18 +66,18 @@ namespace GraphQLMicroservice.Entities
         public string GypsumThickness { get; set; }
         public string GypsumSpecificDensity { get; set; }
         public string GypsumRFactor { get; set; }
-        //public int? GypsumFlameSpreadAstmE84 { get; set; }
-        public object GypsumFlameSpreadAstmE84 { get; set; }
-        //public int? GypsumSmokeProductionAstmE84 { get; set; }
-        public object GypsumSmokeProductionAstmE84 { get; set; }
-        //public int? GypsumSurfaceAbrasionD4977 { get; set; }
-        public object GypsumSurfaceAbrasionD4977 { get; set; }
-        //public int? GypsumIndentationD5420 { get; set; }
-        public object GypsumIndentationD5420 { get; set; }
-        //public int? GypsumSoftBodyImpactE695 { get; set; }
-        public object GypsumSoftBodyImpactE695 { get; set; }
-        //public int? GypsumHardBodyImpactC1929 { get; set; }
-        public object GypsumHardBodyImpactC1929 { get; set; }
+        public int? GypsumFlameSpreadAstmE84 { get; set; }
+        //public object GypsumFlameSpreadAstmE84 { get; set; }
+        public int? GypsumSmokeProductionAstmE84 { get; set; }
+        //public object GypsumSmokeProductionAstmE84 { get; set; }
+        public int? GypsumSurfaceAbrasionD4977 { get; set; }
+        //public object GypsumSurfaceAbrasionD4977 { get; set; }
+        public int? GypsumIndentationD5420 { get; set; }
+        //public object GypsumIndentationD5420 { get; set; }
+        public int? GypsumSoftBodyImpactE695 { get; set; }
+        //public object GypsumSoftBodyImpactE695 { get; set; }
+        public int? GypsumHardBodyImpactC1929 { get; set; }
+        //public object GypsumHardBodyImpactC1929 { get; set; }
         public string BiogenicEmbodiedCarbon { get; set; }
         //Z stands for standard deviation
         public double BiogenicEmbodiedCarbonZ { get; set; }

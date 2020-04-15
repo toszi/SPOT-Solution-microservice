@@ -10,7 +10,7 @@ namespace GraphQLMicroservice.Entities
         public string Id { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime UpdatedOn { get; set; }
-        public object Owner { get; set; }
+        public Owner Owner { get; set; }
         public string Address { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
@@ -25,7 +25,7 @@ namespace GraphQLMicroservice.Entities
         public string Image { get; set; }
         public string LegalName { get; set; }
         public List<string> AltNames { get; set; }
-        public object Jurisdiction { get; set; }
+        public string Jurisdiction { get; set; }
         public bool PrimaryActivityOwner { get; set; }
         public bool PrimaryActivityBuilder { get; set; }
         public bool PrimaryActivityDesign { get; set; }
@@ -37,16 +37,16 @@ namespace GraphQLMicroservice.Entities
         public bool PrimaryActivityForestPracticesCertification { get; set; }
         public bool PrimaryActivityDigitizationQa { get; set; }
         public bool PrimaryActivitySustainabilityConsulting { get; set; }
-        public object TaxId { get; set; }
+        public string TaxId { get; set; }
         public string Website { get; set; }
         public string TransparencyCatalogLink { get; set; }
-        public object Email { get; set; }
+        public string Email { get; set; }
         public string OrgType { get; set; }
-        public object Currency { get; set; }
+        public string Currency { get; set; }
         public bool Enterprise { get; set; }
-        public object Parent { get; set; }
-        public object GwpContact { get; set; }
-        public object UserGroupEmployees { get; set; }
-        public object PrimarySustainabilityContact { get; set; }
+        public string Parent { get; set; }
+        public string GwpContact { get; set; }
+        public string UserGroupEmployees { get; set; }
+        public string PrimarySustainabilityContact { get; set; }
     }
 }

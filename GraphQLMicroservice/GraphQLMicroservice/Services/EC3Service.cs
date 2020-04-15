@@ -47,14 +47,7 @@ namespace GraphQLMicroservice.Services
             }
 
             DebugOutput(responseString);
-            /*
-            JArray jArr = JArray.Parse(responseString);
-            List<string> materials = new List<string>();
-            for (int i = 0; i < jArr.Count; i++)
-            {
-                materials.Add(jArr[i].ToString());
-            }
-            */
+
             List<Material> materialList = JsonConvert.DeserializeObject<List<Material>>(responseString);
 
             for (int i = 0; i < materialList.Count; i++)

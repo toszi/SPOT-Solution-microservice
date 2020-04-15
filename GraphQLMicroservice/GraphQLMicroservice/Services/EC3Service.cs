@@ -55,9 +55,15 @@ namespace GraphQLMicroservice.Services
                 materials.Add(jArr[i].ToString());
             }
             */
-            List<Material> test = JsonConvert.DeserializeObject<List<Material>>(responseString);
+            List<Material> materialList = JsonConvert.DeserializeObject<List<Material>>(responseString);
+
+            for (int i = 0; i < materialList.Count; i++)
+            {
+                if(materialList[i].ConcreteScmDetails != null)
+                    DebugOutput(materialList[i].ConcreteScmDetails.ToString());
+            }
             
-            return test;
+            return materialList;
         }
 
         //returns the login information, including a key that needs to be passed around in order to use the API

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace GraphQLMicroservice.Queries.Types
 {
-    public class ScmDetailsType : ObjectGraphType<ScmDetails>
+    public class ConcreteScmDetailsType : ObjectGraphType<ConcreteScmDetails>
     {
-        public ScmDetailsType()
+        public ConcreteScmDetailsType()
         {
             Field(x => x.FlyAsh);
             Field(x => x.Slag);

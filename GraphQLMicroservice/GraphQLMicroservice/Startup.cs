@@ -40,7 +40,7 @@ namespace GraphQLMicroservice
             services.AddSingleton<MaterialQuery>();
             services.AddSingleton<MaterialType>();
             services.AddSingleton<OwnerType>();
-            services.AddSingleton<ScmDetailsType>();
+            services.AddSingleton<ConcreteScmDetailsType>();
             services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
             services.AddSingleton<IDocumentWriter, DocumentWriter>();
             var sp = services.BuildServiceProvider();

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GraphQLMicroservice.Entities
 {
-    public class ScmDetails
+    public class ConcreteScmDetails
     {
         public double FlyAsh { get; set; }
         public double Slag { get; set; }

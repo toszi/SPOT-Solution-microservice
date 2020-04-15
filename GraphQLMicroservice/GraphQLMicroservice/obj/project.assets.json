@@ -13005,11 +13005,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SDU Semester projekter\\6. Semester\\GraphQLMicroservice\\GraphQLMicroservice\\GraphQLMicroservice\\GraphQLMicroservice.csproj",
+      "projectUniqueName": "D:\\SDU Semester projekter\\6. Semester\\SPOT-Solution-microservice\\GraphQLMicroservice\\GraphQLMicroservice\\GraphQLMicroservice.csproj",
       "projectName": "GraphQLMicroservice",
-      "projectPath": "D:\\SDU Semester projekter\\6. Semester\\GraphQLMicroservice\\GraphQLMicroservice\\GraphQLMicroservice\\GraphQLMicroservice.csproj",
+      "projectPath": "D:\\SDU Semester projekter\\6. Semester\\SPOT-Solution-microservice\\GraphQLMicroservice\\GraphQLMicroservice\\GraphQLMicroservice.csproj",
       "packagesPath": "C:\\Users\\uffes\\.nuget\\packages\\",
-      "outputPath": "D:\\SDU Semester projekter\\6. Semester\\GraphQLMicroservice\\GraphQLMicroservice\\GraphQLMicroservice\\obj\\",
+      "outputPath": "D:\\SDU Semester projekter\\6. Semester\\SPOT-Solution-microservice\\GraphQLMicroservice\\GraphQLMicroservice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -36,7 +36,7 @@ namespace GraphQLMicroservice.Queries.Types
             Field(x => x.ConcreteWCRatio);
             Field(x => x.ConcreteScmMin);
             Field(x => x.ConcreteScmMax);
-            Field<ScmDetailsType>("scnmdetails");
+            Field<ConcreteScmDetailsType>("scnmdetails");
         }
     }
 }

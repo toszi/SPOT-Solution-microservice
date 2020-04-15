@@ -41,7 +41,7 @@ namespace GraphQLMicroservice.Entities
         public double ConcreteWCRatio { get; set; }
         public double ConcreteScmMin { get; set; }
         public double ConcreteScmMax { get; set; }
-        public ScmDetails ConcreteScmDetails { get; set; }
+        public ConcreteScmDetails ConcreteScmDetails { get; set; }
         public string Density { get; set; }
         public string SteelUltimTensileStrMin { get; set; }
         public string SteelYieldTensileStrMin { get; set; }

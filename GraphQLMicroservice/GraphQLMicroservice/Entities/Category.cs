@@ -7,20 +7,20 @@ namespace GraphQLMicroservice.Entities
 {
     public class Category
     {
-        public string id { get; set; }
-        public DateTime created_on { get; set; }
-        public DateTime updated_on { get; set; }
-        public string name { get; set; }
-        public string display_name { get; set; }
-        public string masterformat { get; set; }
-        public string description { get; set; }
-        public string declared_unit { get; set; }
-        public string mass_per_declared_unit { get; set; }
-        public bool beta_only { get; set; }
-        public bool draft { get; set; }
-        public object parents { get; set; }
-        public object subcategories { get; set; }
-        public object foreign_subcategories { get; set; }
-        public string clf_gwp_baseline { get; set; }
+        public string Id { get; set; }
+        public string CreatedOn { get; set; }
+        public string UpdatedOn { get; set; }
+        public string Name { get; set; }
+        public string DisplayName { get; set; }
+        public string Masterformat { get; set; }
+        public string Description { get; set; }
+        public string DeclaredUnit { get; set; }
+        public string MassPerDeclaredUnit { get; set; }
+        public bool BetaOnly { get; set; }
+        public bool Draft { get; set; }
+        public string Parents { get; set; }
+        public List<Category> Subcategories { get; set; }
+        public List<Category> ForeignSubcategories { get; set; }
+        public string ClfGwpBaseline { get; set; }
     }
 }

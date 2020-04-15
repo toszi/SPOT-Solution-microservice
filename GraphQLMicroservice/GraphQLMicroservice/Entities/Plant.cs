@@ -32,7 +32,7 @@ namespace GraphQLMicroservice.Entities
         public string Notes { get; set; }
         public string Distance { get; set; }
         public string CarbonIntensity { get; set; }
-        public List<string> Categories { get; set; }
+        public List<Category> Categories { get; set; }
         public int TotalEpds { get; set; }
     }
 }

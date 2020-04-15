@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  graphqlmicroservice:
+    image: ${DOCKER_REGISTRY-}graphqlmicroservice
+    build:
+      context: .
+      dockerfile: GraphQLMicroservice\Dockerfile

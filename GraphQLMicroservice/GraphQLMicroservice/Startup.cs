@@ -42,7 +42,9 @@ namespace GraphQLMicroservice
             services.AddSingleton<OwnerType>();
             services.AddSingleton<ConcreteScmDetailsType>();
             services.AddSingleton<CategoryType>();
-            services.AddSingleton<LocationType>();
+            services.AddSingleton<PlantLocationType>();
+            services.AddSingleton<ManufacturerLocationType>();
+            services.AddSingleton<OwnedByLocationType>();
             services.AddSingleton<ManufacturerType>();
             services.AddSingleton<OwnedByType>();
             services.AddSingleton<PlantType>();

@@ -18,7 +18,7 @@ namespace GraphQLMicroservice.Queries.Types
             Field(x => x.Address);
             Field(x => x.Latitude);
             Field(x => x.Longitude);
-            Field<LocationType>("location");
+            Field<ManufacturerLocationType>("location");
             Field(x => x.Address_line);
             Field(x => x.Admin_district);
             Field(x => x.Admin_district2);

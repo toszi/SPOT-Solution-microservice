@@ -7,18 +7,18 @@ namespace GraphQLMicroservice.Entities
 {
     public class OwnedByLocation
     {
-        public string streetNumber { get; set; }
-        public string streetName { get; set; }
-        public string municipalitySubdivision { get; set; }
-        public string municipality { get; set; }
-        public string countrySecondarySubdivision { get; set; }
-        public string countryTertiarySubdivision { get; set; }
-        public string countrySubdivision { get; set; }
-        public string postalCode { get; set; }
-        public string countryCode { get; set; }
-        public string country { get; set; }
-        public string countryCodeISO3 { get; set; }
-        public string freeformAddress { get; set; }
-        public string countrySubdivisionName { get; set; }
+        public string StreetNumber { get; set; }
+        public string StreetName { get; set; }
+        public string MunicipalitySubdivision { get; set; }
+        public string Municipality { get; set; }
+        public string CountrySecondarySubdivision { get; set; }
+        public string CountryTertiarySubdivision { get; set; }
+        public string CountrySubdivision { get; set; }
+        public string PostalCode { get; set; }
+        public string CountryCode { get; set; }
+        public string Country { get; set; }
+        public string CountryCodeISO3 { get; set; }
+        public string FreeformAddress { get; set; }
+        public string CountrySubdivisionName { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace GraphQLMicroservice.Entities
         public string Address { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
-        public Location Location { get; set; }
+        public OwnedByLocation Location { get; set; }
         public string Address_line { get; set; }
         public string Admin_district { get; set; }
         public string Admin_district2 { get; set; }

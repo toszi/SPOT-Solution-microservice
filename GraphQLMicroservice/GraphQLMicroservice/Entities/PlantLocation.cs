@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GraphQLMicroservice.Entities
 {
-    public class Location
+    public class PlantLocation
     {
         public string StreetNumber { get; set; }
         public string StreetName { get; set; }

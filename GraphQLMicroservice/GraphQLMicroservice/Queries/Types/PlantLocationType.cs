@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace GraphQLMicroservice.Queries.Types
 {
-    public class LocationType : ObjectGraphType<Location>
+    public class PlantLocationType : ObjectGraphType<PlantLocation>
     {
-        public LocationType()
+        public PlantLocationType()
         {
             Field(x => x.StreetNumber);
             Field(x => x.StreetName);

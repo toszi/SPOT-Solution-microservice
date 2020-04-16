@@ -41,6 +41,11 @@ namespace GraphQLMicroservice
             services.AddSingleton<MaterialType>();
             services.AddSingleton<OwnerType>();
             services.AddSingleton<ConcreteScmDetailsType>();
+            services.AddSingleton<CategoryType>();
+            services.AddSingleton<LocationType>();
+            services.AddSingleton<ManufacturerType>();
+            services.AddSingleton<OwnedByType>();
+            services.AddSingleton<PlantType>();
             services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
             services.AddSingleton<IDocumentWriter, DocumentWriter>();
             var sp = services.BuildServiceProvider();

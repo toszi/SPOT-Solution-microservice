@@ -49,12 +49,6 @@ namespace GraphQLMicroservice.Services
             DebugOutput(responseString);
 
             List<Material> materialList = JsonConvert.DeserializeObject<List<Material>>(responseString);
-
-            for (int i = 0; i < materialList.Count; i++)
-            {
-                if(materialList[i].ConcreteScmDetails != null)
-                    DebugOutput(materialList[i].ConcreteScmDetails.ToString());
-            }
             
             return materialList;
         }

@@ -29,7 +29,7 @@ namespace GraphQLMicroservice.Queries.Types
             Field(x => x.Image);
             Field(x => x.LegalName);
             Field<ListGraphType<StringGraphType>>("alt_names");
-            Field(x => x.Jurisdiction);
+            Field(x => x.Jurisdiction, nullable: true);
             Field(x => x.PrimaryActivityOwner);
             Field(x => x.PrimaryActivityBuilder);
             Field(x => x.PrimaryActivityDesign);
@@ -41,17 +41,17 @@ namespace GraphQLMicroservice.Queries.Types
             Field(x => x.PrimaryActivityForestPracticesCertification);
             Field(x => x.PrimaryActivityDigitizationQa);
             Field(x => x.PrimaryActivitySustainabilityConsulting);
-            Field(x => x.TaxId);
+            Field(x => x.TaxId, nullable: true);
             Field(x => x.Website);
             Field(x => x.TransparencyCatalogLink);
-            Field(x => x.Email);
+            Field(x => x.Email, nullable: true);
             Field(x => x.OrgType);
-            Field(x => x.Currency);
+            Field(x => x.Currency, nullable: true);
             Field(x => x.Enterprise);
-            Field(x => x.Parent);
-            Field(x => x.GwpContact);
-            Field(x => x.UserGroupEmployees);
-            Field(x => x.PrimarySustainabilityContact);
+            Field(x => x.Parent, nullable: true);
+            Field(x => x.GwpContact, nullable: true);
+            Field(x => x.UserGroupEmployees, nullable: true);
+            Field(x => x.PrimarySustainabilityContact, nullable: true);
         }
     }
 }

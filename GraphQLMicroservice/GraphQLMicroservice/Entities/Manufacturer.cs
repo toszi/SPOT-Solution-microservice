@@ -24,7 +24,7 @@ namespace GraphQLMicroservice.Entities
         public string Name { get; set; }
         public string Image { get; set; }
         public string LegalName { get; set; }
-        public List<string> AltNames { get; set; }
+        public List<string> Alt_names { get; set; }
         public string Jurisdiction { get; set; }
         public bool PrimaryActivityOwner { get; set; }
         public bool PrimaryActivityBuilder { get; set; }

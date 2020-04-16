@@ -11,19 +11,19 @@ namespace GraphQLMicroservice.Queries.Types
     {
         public LocationType()
         {
-            Field(x => x.StreetNumber);
-            Field(x => x.StreetName);
-            Field(x => x.NunicipalitySubdivision);
+            Field(x => x.Street_number);
+            Field(x => x.Street_name);
+            Field(x => x.Nunicipality_subdivision);
             Field(x => x.Nunicipality);
-            Field(x => x.NountrySecondarySubdivision);
-            Field(x => x.NountryTertiarySubdivision);
-            Field(x => x.CountrySubdivision);
-            Field(x => x.PostalCode);
-            Field(x => x.CountryCode);
+            Field(x => x.Nountry_secondary_subdivision);
+            Field(x => x.Nountry_tertiary_subdivision);
+            Field(x => x.Country_subdivision);
+            Field(x => x.Postal_code);
+            Field(x => x.Country_code);
             Field(x => x.Country);
-            Field(x => x.CountryCodeISO3);
-            Field(x => x.FreeformAddress);
-            Field(x => x.CountrySubdivisionName);
+            Field(x => x.Country_codeISO3);
+            Field(x => x.Freeform_address);
+            Field(x => x.Country_subdivision_name);
         }
     }
 }

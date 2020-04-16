@@ -11,7 +11,7 @@ namespace GraphQLMicroservice.Queries.Types
     {
         public ConcreteScmDetailsType()
         {
-            Field(x => x.FlyAsh);
+            Field(x => x.Fly_ash);
             Field(x => x.Slag);
         }
     }

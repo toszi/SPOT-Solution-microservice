@@ -7,7 +7,7 @@ namespace GraphQLMicroservice.Entities
 {
     public class ConcreteScmDetails
     {
-        public double FlyAsh { get; set; }
+        public double Fly_ash { get; set; }
         public double Slag { get; set; }
     }
 }

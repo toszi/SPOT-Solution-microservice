@@ -7,7 +7,7 @@ namespace GraphQLMicroservice.Entities
 {
     public class Owner
     {
-        public string UserId { get; set; }
+        public string User_id { get; set; }
         public string Name { get; set; }
     }
 }

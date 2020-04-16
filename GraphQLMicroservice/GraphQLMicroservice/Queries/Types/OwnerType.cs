@@ -11,7 +11,7 @@ namespace GraphQLMicroservice.Queries.Types
     {
         public OwnerType()
         {
-            Field(x => x.UserId);
+            Field(x => x.User_id);
             Field(x => x.Name);
         }
     }

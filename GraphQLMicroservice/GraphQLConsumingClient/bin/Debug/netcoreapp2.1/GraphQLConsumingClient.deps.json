@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "f21397db382fc732e61c02fbcd323e0c779b2424"
+    "signature": "101d3e133ebf927b6fcb53d18f1b6b9e205dfe15"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.1": {
       "GraphQLConsumingClient/1.0.0": {
         "dependencies": {
+          "GraphQL.Client": "3.0.3",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
@@ -34,6 +35,61 @@
         },
         "compile": {
           "GraphQLConsumingClient.dll": {}
+        }
+      },
+      "GraphQL.Client/3.0.3": {
+        "dependencies": {
+          "GraphQL.Client.Abstractions": "3.0.3",
+          "GraphQL.Client.Abstractions.Websocket": "3.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.dll": {
+            "assemblyVersion": "3.0.3.0",
+            "fileVersion": "3.0.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.dll": {}
+        }
+      },
+      "GraphQL.Client.Abstractions/3.0.3": {
+        "dependencies": {
+          "GraphQL.Primitives": "3.0.3",
+          "System.Reactive": "4.3.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.dll": {
+            "assemblyVersion": "3.0.3.0",
+            "fileVersion": "3.0.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.dll": {}
+        }
+      },
+      "GraphQL.Client.Abstractions.Websocket/3.0.3": {
+        "dependencies": {
+          "GraphQL.Client.Abstractions": "3.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll": {
+            "assemblyVersion": "3.0.3.0",
+            "fileVersion": "3.0.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll": {}
+        }
+      },
+      "GraphQL.Primitives/3.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Primitives.dll": {
+            "assemblyVersion": "3.0.3.0",
+            "fileVersion": "3.0.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Primitives.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -209,6 +265,27 @@
           "Microsoft.NETCore.Platforms": "2.1.0"
         }
       },
+      "System.Reactive/4.3.2": {
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0",
+          "System.Threading.Tasks.Extensions": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.2.55399"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.3": {},
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
@@ -957,7 +1034,7 @@
           "Microsoft.Extensions.FileProviders.Abstractions": "2.1.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
           "System.Diagnostics.DiagnosticSource": "4.5.0",
-          "System.Threading.Tasks.Extensions": "4.5.1"
+          "System.Threading.Tasks.Extensions": "4.5.3"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Core.dll": {}
@@ -1259,7 +1336,7 @@
           "System.Numerics.Vectors": "4.5.0",
           "System.Runtime.CompilerServices.Unsafe": "4.5.1",
           "System.Security.Cryptography.Cng": "4.5.0",
-          "System.Threading.Tasks.Extensions": "4.5.1"
+          "System.Threading.Tasks.Extensions": "4.5.3"
         },
         "compile": {
           "lib/netcoreapp2.1/Microsoft.AspNetCore.Server.Kestrel.Core.dll": {}
@@ -3017,9 +3094,6 @@
         },
         "compileOnly": true
       },
-      "System.Threading.Tasks.Extensions/4.5.1": {
-        "compileOnly": true
-      },
       "System.Threading.Tasks.Parallel/4.3.0": {
         "dependencies": {
           "System.Collections.Concurrent": "4.3.0",
@@ -3063,7 +3137,7 @@
           "System.Text.Encoding.Extensions": "4.3.0",
           "System.Text.RegularExpressions": "4.3.0",
           "System.Threading.Tasks": "4.3.0",
-          "System.Threading.Tasks.Extensions": "4.5.1"
+          "System.Threading.Tasks.Extensions": "4.5.3"
         },
         "compileOnly": true
       },
@@ -3157,6 +3231,34 @@
       "serviceable": false,
       "sha512": ""
     },
+    "GraphQL.Client/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fR87M8bMYbxZaZuScUUS+DL8dbQH/HE0pIdbz+8ZobvGqIa5qTt8A3nQYKqaBmqPNJ+n/UTpeyVzYT6ZxExl+g==",
+      "path": "graphql.client/3.0.3",
+      "hashPath": "graphql.client.3.0.3.nupkg.sha512"
+    },
+    "GraphQL.Client.Abstractions/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4MSZ3e0OApztkYeHfUAQhnkF26AZIqQUsg8nEGFnCCTCzgXfNdX6LOwcXMFaRXrfuVxfSGdtTH1dNOWZ+gACDw==",
+      "path": "graphql.client.abstractions/3.0.3",
+      "hashPath": "graphql.client.abstractions.3.0.3.nupkg.sha512"
+    },
+    "GraphQL.Client.Abstractions.Websocket/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G1xN3bZX+DKWvN5DuSdedSOX3+kwiQUOjQQwthvVevrJlQ9G95rhB0fTSOVWjin6HpepxOViabJ2n2JoM/C0Bw==",
+      "path": "graphql.client.abstractions.websocket/3.0.3",
+      "hashPath": "graphql.client.abstractions.websocket.3.0.3.nupkg.sha512"
+    },
+    "GraphQL.Primitives/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zJO5LmLzw67XPajCzPRhVh8ROIfmZUrZtmR6hY4UWIM+gGVdjWnl4bu0Xz+5BXNdcyznd6x4mNKhFO0lHH7ZzA==",
+      "path": "graphql.primitives/3.0.3",
+      "hashPath": "graphql.primitives.3.0.3.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3219,6 +3321,27 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "System.Reactive/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WhGkScPWxw2pp7UwRW8M1OvYZ3WUDPC2wJ0aiuaB4KRD3bt4wLkgHgYnOUu87WRhsurvv5LN0E63iWOEza2o8g==",
+      "path": "system.reactive/4.3.2",
+      "hashPath": "system.reactive.4.3.2.nupkg.sha512"
+    },
+    "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J4GUi3xZQLUBasNwZnjrffN8i5wpHrBtZoLG+OhRyGo/+YunMRWWtwoMDlUAIdmX0uRfpHIBDSV6zyr3yf00TA==",
+      "path": "system.runtime.interopservices.windowsruntime/4.3.0",
+      "hashPath": "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks.Extensions/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+MvhNtcvIbqmhANyKu91jQnvIRVSTiaOiFNfKWwXGHG48YAb4I/TyH8spsySiPYla7gKal5ZnF3teJqZAximyQ==",
+      "path": "system.threading.tasks.extensions/4.5.3",
+      "hashPath": "system.threading.tasks.extensions.4.5.3.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
@@ -5032,13 +5155,6 @@
       "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
-    },
-    "System.Threading.Tasks.Extensions/4.5.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-WSKUTtLhPR8gllzIWO2x6l4lmAIfbyMAiTlyXAis4QBDonXK4b4S6F8zGARX4/P8wH3DH+sLdhamCiHn+fTU1A==",
-      "path": "system.threading.tasks.extensions/4.5.1",
-      "hashPath": "system.threading.tasks.extensions.4.5.1.nupkg.sha512"
     },
     "System.Threading.Tasks.Parallel/4.3.0": {
       "type": "package",

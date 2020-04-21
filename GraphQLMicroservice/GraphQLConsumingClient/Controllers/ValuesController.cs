@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GraphQL;
+using GraphQL.Client.Http;
+using GraphQLMicroservice.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GraphQLConsumingClient.Controllers
@@ -12,9 +15,21 @@ namespace GraphQLConsumingClient.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<List<Material>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var client = new GraphQLHttpClient(new GraphQLHttpClientOptions
+            {
+                EndPoint = new Uri("http://localhost:56713/graphQL")
+            }, null);
+
+            var request = new GraphQLRequest
+            {
+                Query = ""
+            };
+
+            var response = await client.SendQueryAsync<List<Material>>(request);
+            
+            return response.Data;
         }
 
         // GET api/values/5

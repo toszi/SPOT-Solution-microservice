@@ -9,3 +9,7 @@ D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroser
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.RazorAssemblyInfo.cache
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.RazorAssemblyInfo.cs
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.RazorTargetAssemblyInfo.cache
+D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\bin\Debug\netcoreapp2.1\GraphQLConsumingClient.pdb
+D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.dll
+D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.pdb

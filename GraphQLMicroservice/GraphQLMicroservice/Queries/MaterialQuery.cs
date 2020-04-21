@@ -13,7 +13,7 @@ namespace GraphQLMicroservice.Queries
         public MaterialQuery(EC3Service ec3Service)
         {
             Field<ListGraphType<MaterialType>>(
-                "materials",
+                "materials", "Query for all materials from EC3",
                 resolve: context => ec3Service.GetAllMaterials()
                 );
         }

@@ -2,11 +2,11 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "GraphQL.Client/3.0.3": {
+      "GraphQL.Client/3.1.0": {
         "type": "package",
         "dependencies": {
-          "GraphQL.Client.Abstractions": "3.0.3",
-          "GraphQL.Client.Abstractions.Websocket": "3.0.3"
+          "GraphQL.Client.Abstractions": "3.1.0",
+          "GraphQL.Client.Abstractions.Websocket": "3.1.0"
         },
         "compile": {
           "lib/netstandard2.0/GraphQL.Client.dll": {}
@@ -15,10 +15,10 @@
           "lib/netstandard2.0/GraphQL.Client.dll": {}
         }
       },
-      "GraphQL.Client.Abstractions/3.0.3": {
+      "GraphQL.Client.Abstractions/3.1.0": {
         "type": "package",
         "dependencies": {
-          "GraphQL.Primitives": "3.0.3",
+          "GraphQL.Primitives": "3.1.0",
           "System.Reactive": "4.3.2"
         },
         "compile": {
@@ -28,10 +28,10 @@
           "lib/netstandard2.0/GraphQL.Client.Abstractions.dll": {}
         }
       },
-      "GraphQL.Client.Abstractions.Websocket/3.0.3": {
+      "GraphQL.Client.Abstractions.Websocket/3.1.0": {
         "type": "package",
         "dependencies": {
-          "GraphQL.Client.Abstractions": "3.0.3"
+          "GraphQL.Client.Abstractions": "3.1.0"
         },
         "compile": {
           "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll": {}
@@ -40,7 +40,20 @@
           "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll": {}
         }
       },
-      "GraphQL.Primitives/3.0.3": {
+      "GraphQL.Client.Serializer.Newtonsoft/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL.Client.Abstractions.Websocket": "3.1.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll": {}
+        }
+      },
+      "GraphQL.Primitives/3.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/GraphQL.Primitives.dll": {}
@@ -1550,6 +1563,15 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
         }
       },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
       "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
         "type": "package"
       },
@@ -2670,7 +2692,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -3678,7 +3700,7 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -4167,13 +4189,27 @@
           "ref/netstandard1.3/System.Text.Encoding.Extensions.dll": {}
         }
       },
-      "System.Text.Encodings.Web/4.5.0": {
+      "System.Text.Encodings.Web/4.7.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+        }
+      },
+      "System.Text.Json/4.7.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0",
+          "System.Text.Encodings.Web": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Text.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Json.dll": {}
         }
       },
       "System.Text.RegularExpressions/4.3.0": {
@@ -4416,15 +4452,15 @@
     }
   },
   "libraries": {
-    "GraphQL.Client/3.0.3": {
-      "sha512": "fR87M8bMYbxZaZuScUUS+DL8dbQH/HE0pIdbz+8ZobvGqIa5qTt8A3nQYKqaBmqPNJ+n/UTpeyVzYT6ZxExl+g==",
+    "GraphQL.Client/3.1.0": {
+      "sha512": "7Dyx2alvVkCIIcgB97lsGqFKu8QfIEP4ypAjAmaZ/BchLzFuLUCWTRjPlGbVgtagYG0f8jneRakjtNj95wSaYg==",
       "type": "package",
-      "path": "graphql.client/3.0.3",
+      "path": "graphql.client/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
-        "graphql.client.3.0.3.nupkg.sha512",
+        "graphql.client.3.1.0.nupkg.sha512",
         "graphql.client.nuspec",
         "icon.png",
         "lib/net461/GraphQL.Client.dll",
@@ -4433,45 +4469,60 @@
         "lib/netstandard2.0/GraphQL.Client.xml"
       ]
     },
-    "GraphQL.Client.Abstractions/3.0.3": {
-      "sha512": "4MSZ3e0OApztkYeHfUAQhnkF26AZIqQUsg8nEGFnCCTCzgXfNdX6LOwcXMFaRXrfuVxfSGdtTH1dNOWZ+gACDw==",
+    "GraphQL.Client.Abstractions/3.1.0": {
+      "sha512": "+s8Z5EPjwnnjfbkpoPmbD7iR8kTmPoSD5r5YQTJuihnbPlYdUMJD9ecO/0/BFqdQfRVYvHqJxSDdvN/yxCwgWw==",
       "type": "package",
-      "path": "graphql.client.abstractions/3.0.3",
+      "path": "graphql.client.abstractions/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
-        "graphql.client.abstractions.3.0.3.nupkg.sha512",
+        "graphql.client.abstractions.3.1.0.nupkg.sha512",
         "graphql.client.abstractions.nuspec",
         "icon.png",
         "lib/netstandard2.0/GraphQL.Client.Abstractions.dll",
         "lib/netstandard2.0/GraphQL.Client.Abstractions.xml"
       ]
     },
-    "GraphQL.Client.Abstractions.Websocket/3.0.3": {
-      "sha512": "G1xN3bZX+DKWvN5DuSdedSOX3+kwiQUOjQQwthvVevrJlQ9G95rhB0fTSOVWjin6HpepxOViabJ2n2JoM/C0Bw==",
+    "GraphQL.Client.Abstractions.Websocket/3.1.0": {
+      "sha512": "Q2ujDysYU3csew9VBXhGiMSn5XM80mJJssAYuvm8F8snpMcjcCCwthvkqdA6Sn/qNkPGu6gJSX79fpN4WV8igQ==",
       "type": "package",
-      "path": "graphql.client.abstractions.websocket/3.0.3",
+      "path": "graphql.client.abstractions.websocket/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
-        "graphql.client.abstractions.websocket.3.0.3.nupkg.sha512",
+        "graphql.client.abstractions.websocket.3.1.0.nupkg.sha512",
         "graphql.client.abstractions.websocket.nuspec",
         "icon.png",
         "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll",
         "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.xml"
       ]
     },
-    "GraphQL.Primitives/3.0.3": {
-      "sha512": "zJO5LmLzw67XPajCzPRhVh8ROIfmZUrZtmR6hY4UWIM+gGVdjWnl4bu0Xz+5BXNdcyznd6x4mNKhFO0lHH7ZzA==",
+    "GraphQL.Client.Serializer.Newtonsoft/3.1.0": {
+      "sha512": "0xaJyNMdYQiXf2wMQvJ11mgExDWbCWgokN12p8cqbnH9kbe5+c5iW3CAlX2/2uGNJw+RrYVPbt5ftkki5/O12A==",
       "type": "package",
-      "path": "graphql.primitives/3.0.3",
+      "path": "graphql.client.serializer.newtonsoft/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
-        "graphql.primitives.3.0.3.nupkg.sha512",
+        "graphql.client.serializer.newtonsoft.3.1.0.nupkg.sha512",
+        "graphql.client.serializer.newtonsoft.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll",
+        "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.xml"
+      ]
+    },
+    "GraphQL.Primitives/3.1.0": {
+      "sha512": "PkCrU4RxkkZFSfSqdtHilUPRVg5GIVgnoIC4qrguJBCweZf4D1WuwjxHTb47i0FcomVidO+uctvYd0CP/1HWpQ==",
+      "type": "package",
+      "path": "graphql.primitives/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "graphql.primitives.3.1.0.nupkg.sha512",
         "graphql.primitives.nuspec",
         "icon.png",
         "lib/netstandard2.0/GraphQL.Primitives.dll",
@@ -5740,6 +5791,30 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
         "microsoft.aspnetcore.webutilities.2.1.1.nupkg.sha512",
         "microsoft.aspnetcore.webutilities.nuspec"
+      ]
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+      "sha512": "1Am6l4Vpn3/K32daEqZI+FFr96OlZkgwK2LcT3pZ2zWubR5zTPW3/FkO1Rat9kb7oQOa4rxgl9LJHc5tspCWfg==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
@@ -7275,10 +7350,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7301,8 +7376,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.1": {
@@ -10115,10 +10191,10 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
-      "sha512": "Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
+    "System.Runtime.CompilerServices.Unsafe/4.7.0": {
+      "sha512": "IpU1lcHz8/09yDr9N+Juc7SCgNUz+RohkCQI+KsWKR67XxpFr8Z6c8t1iENCXZuRuNCc4HBwme/MDHNVCwyAKg==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.5.1",
+      "path": "system.runtime.compilerservices.unsafe/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -10134,7 +10210,7 @@
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -11356,10 +11432,10 @@
         "system.text.encoding.extensions.nuspec"
       ]
     },
-    "System.Text.Encodings.Web/4.5.0": {
-      "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
+    "System.Text.Encodings.Web/4.7.0": {
+      "sha512": "IJanJWPQvya2sbGStt3Fkdy4IaomUBSadAfYWeJDQw0zclMk9ixSvMeei6cSmTTQ6ZkGIIAbhHZVCoLR7GgX7Q==",
       "type": "package",
-      "path": "system.text.encodings.web/4.5.0",
+      "path": "system.text.encodings.web/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -11369,8 +11445,32 @@
         "lib/netstandard1.0/System.Text.Encodings.Web.xml",
         "lib/netstandard2.0/System.Text.Encodings.Web.dll",
         "lib/netstandard2.0/System.Text.Encodings.Web.xml",
-        "system.text.encodings.web.4.5.0.nupkg.sha512",
+        "lib/netstandard2.1/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.1/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.4.7.0.nupkg.sha512",
         "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Text.Json/4.7.1": {
+      "sha512": "XwzMbct3iNepJaFylN1+l8weWlFburEzXidqleSsLvSXdHSIJHEKtRVKHPlpWcFmJX6k3goPFfVgUfp40RR+bg==",
+      "type": "package",
+      "path": "system.text.json/4.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/netcoreapp3.0/System.Text.Json.dll",
+        "lib/netcoreapp3.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.4.7.1.nupkg.sha512",
+        "system.text.json.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -12092,11 +12192,13 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "GraphQL.Client >= 3.0.3",
+      "GraphQL.Client >= 3.1.0",
+      "GraphQL.Client.Serializer.Newtonsoft >= 3.1.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.4.10"
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.4.10",
+      "System.Text.Json >= 4.7.1"
     ]
   },
   "packageFolders": {
@@ -12142,7 +12244,11 @@
         "dependencies": {
           "GraphQL.Client": {
             "target": "Package",
-            "version": "[3.0.3, )"
+            "version": "[3.1.0, )"
+          },
+          "GraphQL.Client.Serializer.Newtonsoft": {
+            "target": "Package",
+            "version": "[3.1.0, )"
           },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
@@ -12163,6 +12269,10 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
             "version": "[1.4.10, )"
+          },
+          "System.Text.Json": {
+            "target": "Package",
+            "version": "[4.7.1, )"
           }
         },
         "imports": [

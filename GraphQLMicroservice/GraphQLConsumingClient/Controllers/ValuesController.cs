@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Text.Json;
 using System.Collections.Generic;
-using GraphQL.Client.Http;
-using GraphQL.Client.Serializer.Newtonsoft;
 using GraphQLMicroservice.Entities;
 using Microsoft.AspNetCore.Mvc;
-using GraphQL;
-using System.Net.Http;
-using Newtonsoft.Json;
-using System.Text;
+using GraphQL.Client.Http;
+using GraphQL.Client.Serializer.Newtonsoft;
+using System.Text.Json;
 
 namespace GraphQLConsumingClient.Controllers
 {
@@ -20,12 +16,11 @@ namespace GraphQLConsumingClient.Controllers
     {
         // GET api/values
         [HttpGet]
-        public async Task<List<Material>> Get()
+        public async Task<string> Get()
         {
-            /*
             var graphQLClient = new GraphQLHttpClient("http://localhost:44398/graphql", new NewtonsoftJsonSerializer());
             
-            var request = new GraphQLRequest
+            var request = new GraphQLHttpRequest
             {
                 Query = @"?query={
                               materials{
@@ -62,50 +57,29 @@ namespace GraphQLConsumingClient.Controllers
                             }
                          "
             };
+            
             var response = await graphQLClient.SendQueryAsync<List<Material>>(request);
 
-            Console.WriteLine(JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true }));
+            DebugOutput(JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true }));
             if (response.Errors != null && response.Errors.Any())
             {
                 throw new ApplicationException(response.Errors[0].Message);
             }
+            
+            return JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true });
+        }
 
-
-            return JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true });*/
-            var httpClient = new HttpClient
+        //print in the debug window
+        private void DebugOutput(string debugString)
+        {
+            try
             {
-                BaseAddress = new Uri("http://localhost:44398/graphql")
-            };
-
-            var queryObject = new
-            {
-                query = @"query { 
-                viewer { 
-                login
-                }
-            }",
-                variables = new { }
-            };
-
-            var request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Post,
-                Content = new StringContent(JsonConvert.SerializeObject(queryObject), Encoding.UTF8, "application/json")
-            };
-
-            dynamic responseObj;
-
-            using (var response = await httpClient.SendAsync(request))
-            {
-                response.EnsureSuccessStatusCode();
-
-                var responseString = await response.Content.ReadAsStringAsync();
-                responseObj = JsonConvert.DeserializeObject<dynamic>(responseString);
+                System.Diagnostics.Debug.Write(debugString + Environment.NewLine);
             }
-
-            Console.WriteLine(responseObj);
-
-            return responseObj;
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Write(ex.Message, ToString() + Environment.NewLine);
+            }
         }
 
         // GET api/values/5

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GraphiQl;
+﻿using GraphiQl;
 using GraphQL;
 using GraphQL.Http;
+using GraphQL.Server;
 using GraphQL.Types;
 using GraphQLMicroservice.Queries;
 using GraphQLMicroservice.Queries.Types;
@@ -12,12 +9,9 @@ using GraphQLMicroservice.Schemas;
 using GraphQLMicroservice.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace GraphQLMicroservice
 {
@@ -52,6 +46,12 @@ namespace GraphQLMicroservice
             services.AddSingleton<IDocumentWriter, DocumentWriter>();
             var sp = services.BuildServiceProvider();
             services.AddSingleton<ISchema>(new MaterialSchema(new FuncDependencyResolver(type => sp.GetService(type))));
+
+            /*
+            services.AddGraphQL(x =>
+            {
+                x.ExposeExceptions = true; //set true only in development mode. make it switchable.
+            }).AddGraphTypes(ServiceLifetime.Scoped);*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,6 +68,9 @@ namespace GraphQLMicroservice
             }
 
             app.UseHttpsRedirection();
+            /*
+            app.UseGraphQL<MaterialSchema>();
+            */
             app.UseGraphiQl();
             app.UseMvc();
         }

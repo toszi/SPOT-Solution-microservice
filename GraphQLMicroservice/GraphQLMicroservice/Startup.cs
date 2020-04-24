@@ -72,7 +72,6 @@ namespace GraphQLMicroservice
 
             app.UseHttpsRedirection();
             app.UseGraphQL<MaterialSchema>(graphqlPath);
-            app.UseMiddleware<GraphQLMiddleware>(new GraphQLSettings(true, ctx => new GraphQLUserContext(ctx.User)));
             app.UseWebSockets();
             app.UseGraphQLWebSockets<MaterialSchema>("/graphql");
             app.UseGraphiQLServer(new GraphiQLOptions

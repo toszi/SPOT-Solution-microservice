@@ -66,6 +66,19 @@
           "lib/netstandard2.0/GraphQL.Client.Serializer.SystemTextJson.dll": {}
         }
       },
+      "GraphQL.Common/1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Common.dll": {}
+        }
+      },
       "GraphQL.Primitives/3.1.0": {
         "type": "package",
         "compile": {
@@ -4542,6 +4555,21 @@
         "lib/netcoreapp3.1/GraphQL.Client.Serializer.SystemTextJson.xml",
         "lib/netstandard2.0/GraphQL.Client.Serializer.SystemTextJson.dll",
         "lib/netstandard2.0/GraphQL.Client.Serializer.SystemTextJson.xml"
+      ]
+    },
+    "GraphQL.Common/1.0.3": {
+      "sha512": "Y/cnLgeukPHkTOzXdFZDc9VjIBdy+uOuQFmUCljEV/8/CzBxgx37Jbc4o8iTKKjnLGXjx7+E8EdTMaCNwNP5FQ==",
+      "type": "package",
+      "path": "graphql.common/1.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "graphql.common.1.0.3.nupkg.sha512",
+        "graphql.common.nuspec",
+        "lib/netstandard1.0/GraphQL.Common.dll",
+        "lib/netstandard1.0/GraphQL.Common.xml",
+        "lib/netstandard2.0/GraphQL.Common.dll",
+        "lib/netstandard2.0/GraphQL.Common.xml"
       ]
     },
     "GraphQL.Primitives/3.1.0": {
@@ -12224,6 +12252,7 @@
       "GraphQL.Client >= 3.1.0",
       "GraphQL.Client.Serializer.Newtonsoft >= 3.1.0",
       "GraphQL.Client.Serializer.SystemTextJson >= 3.1.0",
+      "GraphQL.Common >= 1.0.3",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
@@ -12282,6 +12311,10 @@
           "GraphQL.Client.Serializer.SystemTextJson": {
             "target": "Package",
             "version": "[3.1.0, )"
+          },
+          "GraphQL.Common": {
+            "target": "Package",
+            "version": "[1.0.3, )"
           },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",

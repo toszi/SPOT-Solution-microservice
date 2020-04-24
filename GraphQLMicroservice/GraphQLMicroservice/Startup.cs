@@ -1,7 +1,7 @@
-﻿using GraphiQl;
-using GraphQL;
+﻿using GraphQL;
 using GraphQL.Http;
 using GraphQL.Server;
+using GraphQL.Server.Ui.GraphiQL;
 using GraphQL.Types;
 using GraphQLMicroservice.Queries;
 using GraphQLMicroservice.Queries.Types;
@@ -47,11 +47,14 @@ namespace GraphQLMicroservice
             var sp = services.BuildServiceProvider();
             services.AddSingleton<ISchema>(new MaterialSchema(new FuncDependencyResolver(type => sp.GetService(type))));
 
-            /*
-            services.AddGraphQL(x =>
+            services.AddGraphQL(options =>
             {
-                x.ExposeExceptions = true; //set true only in development mode. make it switchable.
-            }).AddGraphTypes(ServiceLifetime.Scoped);*/
+                options.EnableMetrics = true;
+                options.ExposeExceptions = true;
+            }).AddGraphTypes(ServiceLifetime.Scoped)
+            // Add required services for de/serialization
+            .AddWebSockets() // Add required services for web socket support
+            .AddDataLoader(); // Add required services for DataLoader support
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,10 +71,16 @@ namespace GraphQLMicroservice
             }
 
             app.UseHttpsRedirection();
-            /*
-            app.UseGraphQL<MaterialSchema>();
-            */
-            app.UseGraphiQl();
+            app.UseGraphQL<MaterialSchema>(graphqlPath);
+            app.UseMiddleware<GraphQLMiddleware>(new GraphQLSettings(true, ctx => new GraphQLUserContext(ctx.User)));
+            app.UseWebSockets();
+            app.UseGraphQLWebSockets<MaterialSchema>("/graphql");
+            app.UseGraphiQLServer(new GraphiQLOptions
+            {
+                GraphiQLPath = "/ui/graphiql",
+                GraphQLEndPoint = "/graphql",
+            });
+            //app.UseGraphiQl();
             app.UseMvc();
         }
     }

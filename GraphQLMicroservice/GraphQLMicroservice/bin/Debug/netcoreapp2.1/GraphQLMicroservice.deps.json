@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "9d58e8742c7ffbb37800e539b527c8b7d14a35ea"
+    "signature": "b3efb8ec84d6bcddc822d41321df86d5341bf52d"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
       "GraphQLMicroservice/1.0.0": {
         "dependencies": {
           "GraphQL": "2.4.0",
+          "GraphQL.Server.Transports.AspNetCore": "3.4.0",
           "GraphQL.Server.Transports.WebSockets": "3.4.0",
           "GraphQL.Server.Ui.GraphiQL": "3.4.0",
           "Microsoft.AspNetCore.App": "2.1.1",
@@ -86,6 +87,25 @@
         },
         "compile": {
           "lib/netstandard2.0/GraphQL.Server.Core.dll": {}
+        }
+      },
+      "GraphQL.Server.Transports.AspNetCore/3.4.0": {
+        "dependencies": {
+          "GraphQL": "2.4.0",
+          "GraphQL.Server.Core": "3.4.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Options": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Server.Transports.AspNetCore.dll": {
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Server.Transports.AspNetCore.dll": {}
         }
       },
       "GraphQL.Server.Transports.Subscriptions.Abstractions/3.4.0": {
@@ -3671,6 +3691,13 @@
       "sha512": "sha512-8Licj3eNNponglRLr1GfcoVO1wEIXOUPBuF7iFLmEvgGeaH0ta95bnJbi7/0qUESF1U+PbdstP7Z9SC++QNHOQ==",
       "path": "graphql.server.core/3.4.0",
       "hashPath": "graphql.server.core.3.4.0.nupkg.sha512"
+    },
+    "GraphQL.Server.Transports.AspNetCore/3.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5ylKHdjGwwbv5RqoEfy2avJ78ptv6SIPu0xzReWHkFu1i/AnzcsihTNMGXgIBff2/S9KjxxUZY5cGxcRrTr5lA==",
+      "path": "graphql.server.transports.aspnetcore/3.4.0",
+      "hashPath": "graphql.server.transports.aspnetcore.3.4.0.nupkg.sha512"
     },
     "GraphQL.Server.Transports.Subscriptions.Abstractions/3.4.0": {
       "type": "package",

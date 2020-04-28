@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "9d58e8742c7ffbb37800e539b527c8b7d14a35ea"
+    "signature": "35dfa9feb3f6e9a1d63eb84a242dffd16c30c0d6"
   },
   "compilationOptions": {
     "defines": [
@@ -25,8 +25,9 @@
       "GraphQLMicroservice/1.0.0": {
         "dependencies": {
           "GraphQL": "2.4.0",
+          "GraphQL.Server.Transports.AspNetCore": "3.4.0",
           "GraphQL.Server.Transports.WebSockets": "3.4.0",
-          "GraphQL.Server.Ui.GraphiQL": "3.4.0",
+          "GraphiQL": "2.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
@@ -38,6 +39,22 @@
         },
         "compile": {
           "GraphQLMicroservice.dll": {}
+        }
+      },
+      "GraphiQL/2.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc": "2.1.1",
+          "Microsoft.AspNetCore.StaticFiles": "2.1.1",
+          "Microsoft.Extensions.FileProviders.Embedded": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphiQL.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphiQL.dll": {}
         }
       },
       "GraphQL/2.4.0": {
@@ -88,6 +105,25 @@
           "lib/netstandard2.0/GraphQL.Server.Core.dll": {}
         }
       },
+      "GraphQL.Server.Transports.AspNetCore/3.4.0": {
+        "dependencies": {
+          "GraphQL": "2.4.0",
+          "GraphQL.Server.Core": "3.4.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Options": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Server.Transports.AspNetCore.dll": {
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Server.Transports.AspNetCore.dll": {}
+        }
+      },
       "GraphQL.Server.Transports.Subscriptions.Abstractions/3.4.0": {
         "dependencies": {
           "GraphQL": "2.4.0",
@@ -124,20 +160,6 @@
         },
         "compile": {
           "lib/netstandard2.0/GraphQL.Server.Transports.WebSockets.dll": {}
-        }
-      },
-      "GraphQL.Server.Ui.GraphiQL/3.4.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/GraphQL.Server.Ui.GraphiQL.dll": {
-            "assemblyVersion": "3.4.0.0",
-            "fileVersion": "3.4.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/GraphQL.Server.Ui.GraphiQL.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -3651,6 +3673,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "GraphiQL/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wUUzFiZrXZWfxO6EwrgPJrPG4RhHHRl4COZlRdQ7tfdRNgldalqYWQlsISgwBMdaoLVXi5looSP7AgJ8mT6CQQ==",
+      "path": "graphiql/2.0.0",
+      "hashPath": "graphiql.2.0.0.nupkg.sha512"
+    },
     "GraphQL/2.4.0": {
       "type": "package",
       "serviceable": true,
@@ -3672,6 +3701,13 @@
       "path": "graphql.server.core/3.4.0",
       "hashPath": "graphql.server.core.3.4.0.nupkg.sha512"
     },
+    "GraphQL.Server.Transports.AspNetCore/3.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5ylKHdjGwwbv5RqoEfy2avJ78ptv6SIPu0xzReWHkFu1i/AnzcsihTNMGXgIBff2/S9KjxxUZY5cGxcRrTr5lA==",
+      "path": "graphql.server.transports.aspnetcore/3.4.0",
+      "hashPath": "graphql.server.transports.aspnetcore.3.4.0.nupkg.sha512"
+    },
     "GraphQL.Server.Transports.Subscriptions.Abstractions/3.4.0": {
       "type": "package",
       "serviceable": true,
@@ -3685,13 +3721,6 @@
       "sha512": "sha512-DlHkUVNgdkNk0HE4bawon6X7CuMwLLIQWHlrTqKNUv91xDQnKtxlGNpSO6Hc0mb3ZnO3j2ZVlEjA0H83EEP7Eg==",
       "path": "graphql.server.transports.websockets/3.4.0",
       "hashPath": "graphql.server.transports.websockets.3.4.0.nupkg.sha512"
-    },
-    "GraphQL.Server.Ui.GraphiQL/3.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3xwVb6vHx2I4lM0DlpLwmdatC8n1eLq7aHXfo13oSQJKMvAVnmNuT3cHJL1RuKrcpHDQHmTwGvIQAeGFyL0R+A==",
-      "path": "graphql.server.ui.graphiql/3.4.0",
-      "hashPath": "graphql.server.ui.graphiql.3.4.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",

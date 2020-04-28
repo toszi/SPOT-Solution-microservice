@@ -17,6 +17,7 @@ D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroser
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\bin\Debug\netcoreapp2.1\GraphQLMicroservice.runtimeconfig.json
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\bin\Debug\netcoreapp2.1\GraphQLMicroservice.runtimeconfig.dev.json
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\bin\Debug\netcoreapp2.1\GraphQLMicroservice.dll
+D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\bin\Debug\netcoreapp2.1\GraphQLMicroservice.pdb
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\obj\Debug\netcoreapp2.1\GraphQLMicroservice.csprojAssemblyReference.cache
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\obj\Debug\netcoreapp2.1\GraphQLMicroservice.csproj.CoreCompileInputs.cache
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\obj\Debug\netcoreapp2.1\GraphQLMicroservice.RazorAssemblyInfo.cache
@@ -24,3 +25,6 @@ D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroser
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\obj\Debug\netcoreapp2.1\GraphQLMicroservice.AssemblyInfoInputs.cache
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\obj\Debug\netcoreapp2.1\GraphQLMicroservice.AssemblyInfo.cs
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\obj\Debug\netcoreapp2.1\GraphQLMicroservice.RazorTargetAssemblyInfo.cache
+D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\obj\Debug\netcoreapp2.1\GraphQLMicroservice.dll
+D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\obj\Debug\netcoreapp2.1\GraphQLMicroservice.pdb
+D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLMicroservice\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

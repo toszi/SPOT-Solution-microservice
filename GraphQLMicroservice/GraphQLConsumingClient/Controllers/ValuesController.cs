@@ -57,8 +57,9 @@ namespace GraphQLConsumingClient.Controllers
                             }
                          "
             };
-            
-            var response = await graphQLClient.SendQueryAsync<List<Material>>(request);
+
+            var response = await graphQLClient.SendQueryAsync(request, () => new { materials = new List<Material>() });
+            List<Material> materials = response.Data.materials;
 
             DebugOutput(JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true }));
             if (response.Errors != null && response.Errors.Any())

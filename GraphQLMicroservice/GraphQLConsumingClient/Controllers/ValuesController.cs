@@ -4,9 +4,10 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using GraphQLMicroservice.Entities;
 using Microsoft.AspNetCore.Mvc;
-using GraphQL.Client.Http;
 using GraphQL.Client.Serializer.Newtonsoft;
 using System.Text.Json;
+using GraphQL.Client.Http;
+using GraphQL.Client.Abstractions;
 
 namespace GraphQLConsumingClient.Controllers
 {
@@ -61,7 +62,11 @@ namespace GraphQLConsumingClient.Controllers
             var response = await graphQLClient.SendQueryAsync(request, () => new { materials = new List<Material>() });
             List<Material> materials = response.Data.materials;
 
-            DebugOutput(JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true }));
+            for (int i = 0; i < materials.Count; i++)
+            {
+                DebugOutput("Amount of materials: " + i);
+            }
+            
             if (response.Errors != null && response.Errors.Any())
             {
                 throw new ApplicationException(response.Errors[0].Message);

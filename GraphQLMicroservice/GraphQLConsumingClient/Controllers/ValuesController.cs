@@ -8,6 +8,8 @@ using GraphQL.Client.Serializer.Newtonsoft;
 using System.Text.Json;
 using GraphQL.Client.Http;
 using GraphQL.Client.Abstractions;
+using System.Net.Http;
+using GraphQLConsumingClient.Helpers;
 
 namespace GraphQLConsumingClient.Controllers
 {
@@ -19,31 +21,33 @@ namespace GraphQLConsumingClient.Controllers
         [HttpGet]
         public async Task<string> Get()
         {
+            /*
+            GraphQLClient client = new GraphQLClient(new HttpClient());
+            var response = await client.GetMaterialsAsync();
+            response.OnErrorThrowException();
+            var reservations = response.Data;
+            */
+            
             var graphQLClient = new GraphQLHttpClient("http://localhost:44398/graphql", new NewtonsoftJsonSerializer());
             
             var request = new GraphQLHttpRequest
             {
-                Query = @"?query={
+                Query = @"query={
                               materials{
                                 id
                                 name
-                                description
-                                gwp_z
                                 concrete_scm_details{
                                   fly_ash
                                 }
                                 pct80_gwp_per_category_declared_unit
                                 manufacturer{
                                   name
-                                  alt_names
                                   location{
                                     country
-                                    postalCode
                                   }
                                 }
                                 plant{
                                   name
-                                  alt_names
                                   location{
                                     localName
                                   }
@@ -71,7 +75,7 @@ namespace GraphQLConsumingClient.Controllers
             {
                 throw new ApplicationException(response.Errors[0].Message);
             }
-            
+
             return JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true });
         }
 

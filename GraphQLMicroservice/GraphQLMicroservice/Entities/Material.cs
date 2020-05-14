@@ -66,17 +66,11 @@ namespace GraphQLMicroservice.Entities
         public string Gypsum_specific_density { get; set; }
         public string Gypsum_r_factor { get; set; }
         public int? Gypsum_flame_spread_astm_e84 { get; set; }
-        //public object GypsumFlameSpreadAstmE84 { get; set; }
         public int? Gypsum_smoke_production_astm_e84 { get; set; }
-        //public object GypsumSmokeProductionAstmE84 { get; set; }
         public int? Gypsum_surface_abrasion_d4977 { get; set; }
-        //public object GypsumSurfaceAbrasionD4977 { get; set; }
         public int? Gypsum_indentation_d5420 { get; set; }
-        //public object GypsumIndentationD5420 { get; set; }
         public int? Gypsum_soft_body_impact_e695 { get; set; }
-        //public object GypsumSoftBodyImpactE695 { get; set; }
         public int? Gypsum_hard_body_impact_c1929 { get; set; }
-        //public object GypsumHardBodyImpactC1929 { get; set; }
         public string Biogenic_embodied_carbon { get; set; }
         //Z stands for standard deviation
         public float Biogenic_embodied_carbon_z { get; set; }

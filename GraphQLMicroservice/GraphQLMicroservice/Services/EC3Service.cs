@@ -16,13 +16,13 @@ namespace GraphQLMicroservice.Services
 {
     public class EC3Service
     {
-        private const string baseURL = "https://etl-api.cqd.io/api";
+        private const string BASE_URL = "https://etl-api.cqd.io/api";
 
         public List<Material> GetAllMaterials()
         {
             string responseString = string.Empty;
             LoginCredentials deserializedLoginCredentials = JsonConvert.DeserializeObject<LoginCredentials>(Login());
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(baseURL + "/materials");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(BASE_URL + "/materials");
             request.PreAuthenticate = true;
             request.Headers.Add("Authorization", "Bearer " + deserializedLoginCredentials.key);
 
@@ -49,6 +49,8 @@ namespace GraphQLMicroservice.Services
             DebugOutput(responseString);
 
             List<Material> materialList = JsonConvert.DeserializeObject<List<Material>>(responseString);
+
+            DebugOutput("Amount of materials : " + materialList.Count);
             
             return materialList;
         }
@@ -56,7 +58,7 @@ namespace GraphQLMicroservice.Services
         //returns the login information, including a key that needs to be passed around in order to use the API
         private string Login()
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(baseURL + "/rest-auth/login");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(BASE_URL + "/rest-auth/login");
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
 

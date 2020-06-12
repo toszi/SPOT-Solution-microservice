@@ -13204,23 +13204,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\uffes\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\toszi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SDU Semester projekter\\6. Semester\\SPOT-Solution-microservice\\GraphQLMicroservice\\GraphQLMicroservice\\GraphQLMicroservice.csproj",
+      "projectUniqueName": "F:\\SDU\\Bachelorprojekt\\SPOT-Solution-microservice\\GraphQLMicroservice\\GraphQLMicroservice\\GraphQLMicroservice.csproj",
       "projectName": "GraphQLMicroservice",
-      "projectPath": "D:\\SDU Semester projekter\\6. Semester\\SPOT-Solution-microservice\\GraphQLMicroservice\\GraphQLMicroservice\\GraphQLMicroservice.csproj",
-      "packagesPath": "C:\\Users\\uffes\\.nuget\\packages\\",
-      "outputPath": "D:\\SDU Semester projekter\\6. Semester\\SPOT-Solution-microservice\\GraphQLMicroservice\\GraphQLMicroservice\\obj\\",
+      "projectPath": "F:\\SDU\\Bachelorprojekt\\SPOT-Solution-microservice\\GraphQLMicroservice\\GraphQLMicroservice\\GraphQLMicroservice.csproj",
+      "packagesPath": "C:\\Users\\toszi\\.nuget\\packages\\",
+      "outputPath": "F:\\SDU\\Bachelorprojekt\\SPOT-Solution-microservice\\GraphQLMicroservice\\GraphQLMicroservice\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\uffes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\toszi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13272,6 +13268,7 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -13286,10 +13283,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

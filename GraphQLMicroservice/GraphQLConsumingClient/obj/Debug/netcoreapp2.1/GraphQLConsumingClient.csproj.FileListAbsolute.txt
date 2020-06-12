@@ -13,3 +13,20 @@ D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroser
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.dll
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.pdb
 D:\SDU Semester projekter\6. Semester\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\bin\Debug\netcoreapp2.1\appsettings.Development.json
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\bin\Debug\netcoreapp2.1\appsettings.json
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\bin\Debug\netcoreapp2.1\GraphQLConsumingClient.deps.json
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\bin\Debug\netcoreapp2.1\GraphQLConsumingClient.runtimeconfig.json
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\bin\Debug\netcoreapp2.1\GraphQLConsumingClient.runtimeconfig.dev.json
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\bin\Debug\netcoreapp2.1\GraphQLConsumingClient.dll
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\bin\Debug\netcoreapp2.1\GraphQLConsumingClient.pdb
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.csprojAssemblyReference.cache
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.RazorAssemblyInfo.cache
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.RazorAssemblyInfo.cs
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.AssemblyInfoInputs.cache
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.AssemblyInfo.cs
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.RazorTargetAssemblyInfo.cache
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.dll
+F:\SDU\Bachelorprojekt\SPOT-Solution-microservice\GraphQLMicroservice\GraphQLConsumingClient\obj\Debug\netcoreapp2.1\GraphQLConsumingClient.pdb

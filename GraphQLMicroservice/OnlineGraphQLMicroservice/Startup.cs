@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using GraphQL.Server;
+using GraphQL.Server.Ui.GraphiQL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OnlineGraphQLMicroservice.Schemas;
 
 namespace OnlineGraphQLMicroservice
 {
@@ -16,6 +14,20 @@ namespace OnlineGraphQLMicroservice
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<MaterialSchema>();
+
+            services.AddGraphQL(options =>
+            {
+                options.EnableMetrics = true;
+                options.ExposeExceptions = true;
+            })
+            .AddWebSockets()
+            .AddDataLoader();
+
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.AllowSynchronousIO = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,14 +38,13 @@ namespace OnlineGraphQLMicroservice
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
+            app.UseWebSockets();
+            app.UseGraphQLWebSockets<MaterialSchema>();
+            app.UseGraphQL<MaterialSchema>();
+            app.UseGraphiQLServer(new GraphiQLOptions
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                GraphiQLPath = "/ui/graphiql",
+                GraphQLEndPoint = "/graphql"
             });
         }
     }

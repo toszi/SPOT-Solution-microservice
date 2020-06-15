@@ -19,7 +19,7 @@ namespace GraphQLConsumingClient.Controllers
         [HttpGet]
         public async Task<string> Get()
         {
-            var graphQLClient = new GraphQLHttpClient("http://localhost:56910/graphql", new NewtonsoftJsonSerializer());
+            var graphQLClient = new GraphQLHttpClient("http://localhost:61218/graphql", new NewtonsoftJsonSerializer());
             
             var request = new GraphQLHttpRequest
             {

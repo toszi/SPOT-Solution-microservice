@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OnlineGraphQLMicroservice.Interfaces;
 using OnlineGraphQLMicroservice.Schemas;
+using OnlineGraphQLMicroservice.Services;
 
 namespace OnlineGraphQLMicroservice
 {
@@ -15,6 +17,7 @@ namespace OnlineGraphQLMicroservice
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<MaterialSchema>();
+            services.AddSingleton<IEC3Service, EC3Service>();
 
             services.AddGraphQL(options =>
             {

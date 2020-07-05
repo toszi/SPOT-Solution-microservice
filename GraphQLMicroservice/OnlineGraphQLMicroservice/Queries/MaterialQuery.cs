@@ -1,4 +1,5 @@
 ﻿using GraphQL.Types;
+using OnlineGraphQLMicroservice.Interfaces;
 using OnlineGraphQLMicroservice.Services;
 using OnlineGraphQLMicroservice.Types;
 using System;
@@ -10,12 +11,12 @@ namespace OnlineGraphQLMicroservice.Queries
 {
     public class MaterialQuery : ObjectGraphType
     {
-        readonly EC3Service ec3Service = new EC3Service();
+        private static readonly IEC3Service instance = EC3Service.Instance;
         public MaterialQuery()
         {
             Field<ListGraphType<MaterialType>>(
                 "materials", "Query for all materials from EC3", 
-                resolve: context => ec3Service.GetAllMaterials()
+                resolve: context => instance.getMaterialList()
                 );
         }
     }

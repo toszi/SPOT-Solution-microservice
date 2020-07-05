@@ -1,6 +1,7 @@
 ﻿
 using Newtonsoft.Json;
 using OnlineGraphQLMicroservice.Entities;
+using OnlineGraphQLMicroservice.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,11 +9,37 @@ using System.Net;
 
 namespace OnlineGraphQLMicroservice.Services
 {
-    public class EC3Service
+    public class EC3Service : IEC3Service
     {
         private const string BASE_URL = "https://etl-api.cqd.io/api";
+        private List<Material> materialList;
 
-        public List<Material> GetAllMaterials()
+        /*
+         Singleton start
+             */
+
+        public EC3Service()
+        {
+            GetAllMaterials();
+        }
+        private static EC3Service instance = null;
+        public static EC3Service Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new EC3Service();
+                }
+                return instance;
+            }
+        }
+
+        /*
+         Singleton end
+             */
+
+        public void GetAllMaterials()
         {
             string responseString = string.Empty;
             LoginCredentials deserializedLoginCredentials = JsonConvert.DeserializeObject<LoginCredentials>(Login());
@@ -40,11 +67,11 @@ namespace OnlineGraphQLMicroservice.Services
 
             DebugOutput(responseString);
 
-            List<Material> materialList = JsonConvert.DeserializeObject<List<Material>>(responseString);
+            List<Material> materials = JsonConvert.DeserializeObject<List<Material>>(responseString);
 
-            DebugOutput("Amount of materials : " + materialList.Count);
+            DebugOutput("Amount of materials : " + materials.Count);
 
-            return materialList;
+            materialList = materials;
         }
 
         //returns the login information, including a key that needs to be passed around in order to use the API
@@ -85,6 +112,9 @@ namespace OnlineGraphQLMicroservice.Services
             }
         }
 
-    
+        public List<Material> getMaterialList()
+        {
+            return materialList;
+        }
 }
 }
